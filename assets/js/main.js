@@ -68,10 +68,10 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
         576: {
             slidesPerView: 2,
         },
-        768: {
-            slidesPerView: 4,
-            spaceBetween: 48,
-        },
+        // 768: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 32,
+        // },
     },
 });
 
