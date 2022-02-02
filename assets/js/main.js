@@ -118,11 +118,26 @@ if (selectedTheme) {
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
-        // Add or remove the light / icon theme
-        document.body.classList.toggle(lightTheme)
-        themeButton.classList.toggle(iconTheme)
-            // We save the theme and the current icon that the user chose
-        localStorage.setItem('selected-theme', getCurrentTheme())
-        localStorage.setItem('selected-icon', getCurrentIcon())
-    })
-    /*=============== SCROLL REVEAL ANIMATION ===============*/
+    // Add or remove the light / icon theme
+    document.body.classList.toggle(lightTheme)
+    themeButton.classList.toggle(iconTheme)
+        // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    //reset:true
+})
+
+sr.reveal('.home__data')
+
+sr.reveal('.home__handle', { delay: 700 })
+
+sr.reveal('.home__social, .home__scroll', { delay: 900, origin: 'bottom' })
